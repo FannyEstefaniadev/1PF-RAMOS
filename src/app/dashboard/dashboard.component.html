@@ -1,0 +1,38 @@
+<mat-drawer-container class="example-container" autosize>
+
+  <!-- SIDEBAR-->
+
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <p>pages</p>
+    <p *ngIf="showFiller"></p>
+    <button  (click)="showFiller = !showFiller" mat-raised-button>
+      lista de alumnos
+    </button>
+    <br>
+    <p *ngIf="showAbmDeAlumnos"></p>
+    <button (click)="toggleAbmDeAlumnos()" mat-raised-button>
+      {{ showAbmDeAlumnos ? ' ABM de alumnos' : ' ABM de alumnos' }}
+    </button>
+  </mat-drawer>
+  <!-- FIN SIDEBAR-->
+
+  <!-- TOOLBAR-->
+  <p>
+    <mat-toolbar color="primary">
+      <button (click)="drawer.toggle()" mat-icon-button class="example-icon"
+        aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>My App</span>
+      <span class="example-spacer"></span>
+    </mat-toolbar>
+  </p>
+  <!--FIN TOOLBAR-->
+
+  <main class="pp">
+    <app-lista-de-alumnos *ngIf="showFiller"></app-lista-de-alumnos>
+    <app-abm-de-alumnos *ngIf="showAbmDeAlumnos"></app-abm-de-alumnos>
+  </main>
+
+
+</mat-drawer-container>

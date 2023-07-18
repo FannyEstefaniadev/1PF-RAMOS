@@ -1,0 +1,38 @@
+/* Estilos para la lista de alumnos */
+.mat-list-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+
+  
+}
+.nnnn{
+  background-color: rgb(57, 58, 60);
+}
+
+.person-content {
+  margin-left: 20px;
+ background-color: rgb(60, 55, 55);
+}
+
+/* Estilos para el avatar */
+img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+h3 {
+  padding: 1px;
+  margin: 1px;
+}
+
+/* Agregar un poco de espacio entre los elementos de la lista */
+.mat-list-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+
